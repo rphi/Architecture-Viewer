@@ -1,0 +1,10 @@
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\bin\Debug\Architecture Viewer.exe.config
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\bin\Debug\Architecture Viewer.exe
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\bin\Debug\Architecture Viewer.pdb
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture Viewer.csprojResolveAssemblyReference.cache
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.Properties.Resources.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture Viewer.csproj.GenerateResource.Cache
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture Viewer.exe
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture Viewer.pdb
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.Main.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.GenerateReport.resources
