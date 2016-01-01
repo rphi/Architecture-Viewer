@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualBasic.Devices;
 
 namespace Architecture_Viewer
@@ -18,6 +16,9 @@ namespace Architecture_Viewer
         public double ramUsed;
         public DateTime timestamp;
         public string computerName;
+        public string installedSoftware;
+        public int installedSoftwareCount;
+        public string diskInfo;
 
         public ComputerEnvironment()
         {
@@ -42,6 +43,58 @@ namespace Architecture_Viewer
             computerName = Environment.MachineName;
 
             timestamp = DateTime.Now;
+
+            installedSoftware = GetInstalledSoftware();
+
+            diskInfo = GetDiskInfo();
+        }
+
+        private string GetInstalledSoftware()
+        {
+            string registry_key = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+            var programs = new StringBuilder();
+            using (Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(registry_key))
+            {
+                foreach (string subkey_name in key.GetSubKeyNames())
+                {
+                    using (Microsoft.Win32.RegistryKey subkey = key.OpenSubKey(subkey_name))
+                    {
+                        string displayName = (string) subkey.GetValue("DisplayName", null);
+                        if (displayName != null)
+                        {
+                            programs.AppendLine(subkey.GetValue("DisplayName") + ";");
+                            installedSoftwareCount++;
+                        }
+                    }
+                }
+            }
+            return "Total programs installed: " + installedSoftwareCount + "\r\n-----------------------\r\n" + programs.ToString();
+        }
+
+        private string GetDiskInfo()
+        {
+            var d = new StringBuilder();
+            DriveInfo[] drives = System.IO.DriveInfo.GetDrives();
+            foreach (System.IO.DriveInfo drive in drives)
+            {
+                if (drive.IsReady)
+                {
+                    d.AppendLine("Name: " + drive.Name + " \"" + drive.VolumeLabel + "\"");
+                    d.AppendLine("Free space: " + Math.Round(drive.TotalFreeSpace * 1e-6) + "/" + Math.Round(drive.TotalSize * 1e-6));
+                    d.AppendLine("Type: " + drive.DriveType + "/" + drive.DriveFormat);
+                    d.AppendLine("Status: " + CheckDiskStatus(drive));
+                    d.AppendLine("--------------------------");
+                }
+            }
+            return d.ToString();
+        }
+
+        private string CheckDiskStatus(DriveInfo drive)
+        {
+            double spaceUsed = drive.TotalFreeSpace / drive.TotalSize;
+            if (spaceUsed < 0.6) { return "OK"; }
+            else if (spaceUsed < 0.8) { return "Warning"; }
+            else { return "Error"; }
         }
     }
 }

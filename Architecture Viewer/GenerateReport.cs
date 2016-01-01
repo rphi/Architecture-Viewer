@@ -8,6 +8,7 @@ namespace Architecture_Viewer
     public partial class GenerateReport : Form
     {
         string folder;
+        ComputerEnvironment computer;
 
         public GenerateReport()
         {
@@ -33,10 +34,7 @@ namespace Architecture_Viewer
                 return;
             }
 
-            progressBar.Enabled = true;
-            progressBar.Style = ProgressBarStyle.Marquee;
-
-            var location = folderBrowserDialog1.SelectedPath + "\\PhippsNET-ITC-report-" + DateTime.Now.ToString("dd-MM-yy-HHmmss") + ".txt";
+            var location = folderBrowserDialog1.SelectedPath + "\\CephSolutions-report-" + DateTime.Now.ToString("dd-MM-yy-HHmmss") + ".txt";
 
             var report = reportGen();
 
@@ -47,7 +45,6 @@ namespace Architecture_Viewer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error saving report", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBar.Enabled = false;
                 return;
             }
 
@@ -58,10 +55,10 @@ namespace Architecture_Viewer
 
         private string reportGen()
         {
-            var env = new ComputerEnvironment();
+            var env = computer;
             var stringbld = new StringBuilder();
 
-            stringbld.AppendLine("###### PhippsNET ITC System Information Tool Report ######");
+            stringbld.AppendLine("###### Cephalopod Solutions System Information Tool Report ######");
             stringbld.AppendLine("Computer Name: " + env.computerName);
             stringbld.AppendLine("Generated: " + env.timestamp);
             stringbld.AppendLine("OS Name: " + env.os);
@@ -70,8 +67,21 @@ namespace Architecture_Viewer
             stringbld.AppendLine("Service Pack: " + env.servicePack);
             stringbld.AppendLine("Installed RAM: " + env.ramTotal);
             stringbld.AppendLine("Free RAM: " + env.ramFree + "(" + Math.Round(env.ramUsed, 1) + "% used)");
+            stringbld.AppendLine("\r\nDisk Information: \r\n--------------\r\n" + env.diskInfo);
+            stringbld.AppendLine("Installed Software: " + env.installedSoftware);
 
             return stringbld.ToString();
+        }
+
+        private void GenerateReport_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void Launch(object c)
+        {
+            computer = (ComputerEnvironment)c;
+            Show();
         }
     }
 }

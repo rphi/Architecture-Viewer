@@ -8,3 +8,5 @@ d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture 
 d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture Viewer.pdb
 d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.Main.resources
 d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.GenerateReport.resources
+D:\rphip\Documents\Visual Studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.GenerateData.resources
+D:\rphip\Documents\Visual Studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Debug\Architecture_Viewer.Startup.resources

@@ -36,7 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.goButton = new System.Windows.Forms.Button();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -114,22 +113,11 @@
             this.goButton.UseVisualStyleBackColor = true;
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
-            // progressBar
-            // 
-            this.progressBar.Enabled = false;
-            this.progressBar.Location = new System.Drawing.Point(12, 188);
-            this.progressBar.MarqueeAnimationSpeed = 10;
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(398, 23);
-            this.progressBar.Step = 5;
-            this.progressBar.TabIndex = 7;
-            // 
             // GenerateReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 225);
-            this.Controls.Add(this.progressBar);
+            this.ClientSize = new System.Drawing.Size(422, 184);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -139,7 +127,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "GenerateReport";
-            this.Text = "Generate report - PhippsNET ITC";
+            this.Text = "Generate report";
+            this.Load += new System.EventHandler(this.GenerateReport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +144,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button goButton;
-        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

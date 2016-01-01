@@ -1,0 +1,11 @@
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\bin\Release\Architecture Viewer.exe.config
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\bin\Release\Architecture Viewer.exe
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\bin\Release\Architecture Viewer.pdb
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture_Viewer.GenerateData.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture_Viewer.Startup.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture_Viewer.GenerateReport.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture_Viewer.Main.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture_Viewer.Properties.Resources.resources
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture Viewer.csproj.GenerateResource.Cache
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture Viewer.exe
+d:\rphip\documents\visual studio 2015\Projects\Architecture Viewer\Architecture Viewer\obj\Release\Architecture Viewer.pdb

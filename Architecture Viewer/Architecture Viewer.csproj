@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -48,7 +52,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputerEnvironment.cs" />
-    <Compile Include="Freshdesk.cs" />
+    <Compile Include="GenerateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateData.Designer.cs">
+      <DependentUpon>GenerateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup.Designer.cs">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GenerateData.resx">
+      <DependentUpon>GenerateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup.resx">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Freshdesk.cs" />
     <Compile Include="GenerateReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -90,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cephsollogo-blackonwhite - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cephsollogo-blackonwhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
